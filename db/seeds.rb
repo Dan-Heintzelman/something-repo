@@ -1,12 +1,9 @@
 require 'faker'
 
-dan = User.create!(username: "dheintz", password: "password")
-michael = User.create!(username: "yao", password: "password")
-sandra = User.create!(username: "sandra", password: "password")
+dan = User.create!(username: "dheintz", password: "password", zip_code: 60657)
+dana = User.create!(username: "dana", password: "password", zip_code: 28806)
 
-10.times do 
-	User.create!(username: Faker::Name.name, password: "password")
-end	
+
 
 
 

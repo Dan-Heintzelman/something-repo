@@ -1,5 +1,5 @@
 get '/'  do
-  erb "Yo"
+  erb :"index"
 end
 
 
