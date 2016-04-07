@@ -1,0 +1,44 @@
+<div id="pagewrap">
+
+	<header>
+		<% if current_user %>
+			<h1>Welcome, <%= current_user.username.capitalize %></h1>
+		<% else %>
+			<h1>Welcome to Something!  Please Register.</h1>
+		<% end %>
+	</header>
+		
+	<section id="content">
+		<h2>Time</h2>
+		<p></p>
+		
+	</section>
+	
+	<section id="middle">
+		<ul class="menu">
+    <li>
+        <a class="something" href="#"><div class="button">Something...</div></a>
+        <ul>
+            <li><a href="#">Funny</a></li>
+            <li><a href="#">Inspirational</a></li>
+            <li><a href="#">Motivational</a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </li>
+</ul>
+
+	</section>
+
+	<aside id="sidebar" class="weather">
+		<h2>Weather</h2>
+			<p></p>
+	</aside>
+	
+	<footer>
+		<p><a href='/logout'>Goodbye!</a></p>
+	</footer>
+
+</div>
+
+
+<!-- AIzaSyCNm_hvfwsYFmKa52c8rUtiPdoDKTxagv4 -->

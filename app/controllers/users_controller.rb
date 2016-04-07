@@ -14,7 +14,7 @@ end
 #Create new user
 
 post '/users' do
-	user = User.new(username: params[:username], password: params[:password])
+	user = User.new(username: params[:username], password: params[:password], zip_code: params[:zip_code] )
   if user.save
     session[:user_id] = user.id
     redirect "/"
@@ -23,3 +23,4 @@ post '/users' do
     erb :"users/new"
   end
 end
+
