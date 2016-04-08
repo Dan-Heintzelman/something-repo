@@ -107,7 +107,13 @@ var keyword = "mountains";
             } else {
                 $form.fadeOut("slow");
             }
-        }); // register click
+        }); // register/login click
+
+        $(".quote").on("click", function(event){
+            event.preventDefault();
+
+            $('blockquote').show();
+        }); // end of click something...
 
 
 
