@@ -128,7 +128,7 @@ header, #content, #middle, #sidebar {
 }
 
 /* color from http://hslpicker.com/#75768a,0.47 */
-#pagewrap, #sidebar, #content {
+#pagewrap, #sidebar, #content, blockquote {
   background-color: hsla(238, 8%, 50%, 0.2);
 }
 
@@ -223,4 +223,10 @@ footer a:link, footer a:visited {
 
 footer a:hover {
   color:black;
+}
+
+.something-box {
+  position: fixed;
+  bottom : 80px;
+  width: 80%;
 }
