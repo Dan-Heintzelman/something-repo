@@ -192,3 +192,35 @@ a:hover {
    border-top-color: #595f63;
    background: #595f63;
    }
+
+
+form > label, form > input {
+  display: inline-block;
+  width: 300px;
+}
+
+form > input {
+  background-color: hsla(197, 95%, 35%, 0.32);
+}
+
+.submit {
+  display: inline-block;
+  width: 150px;
+  background-color: hsla(197, 14%, 56%, 0.95);
+}
+.animatedForm {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  font-size: 1em;
+}
+
+footer a:link, footer a:visited {
+  color:white;
+}
+
+footer a:hover {
+  color:black;
+}

@@ -1,5 +1,9 @@
 get '/'  do
-  erb :"index"
+  if logged_in?
+    erb :"users/show"
+  else
+    erb :index
+  end
 end
 
 
@@ -18,7 +22,7 @@ post '/session' do
       redirect '/'
   else
     @error = "There was a problem logging in."
-    erb :"session/new"
+    erb :"index"
   end
 end
 
