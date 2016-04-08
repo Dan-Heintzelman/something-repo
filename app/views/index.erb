@@ -1,41 +1,55 @@
 <div id="pagewrap">
 
 	<header>
-		<% if current_user %>
-			<h1>Welcome, <%= current_user.username.capitalize %></h1>
-		<% else %>
-			<h1>Welcome to Something!  Please Register.</h1>
-		<% end %>
+			<h1>Sieze the day. Time to do Something...</h1>
+			<h2>Wonderful, Inspirational, Funny, Beautiful, Random.</h2>
 	</header>
 		
-	<section id="content">
-		<h2>Time</h2>
-		<p></p>
+	<section class="login" id="content">
+		<a class="registerClick" href=""><h2 class="button">Register</h2></a>
+		<form class="animatedForm" method="post" action="/users">
+			<label>Username:</label>
+			<input type="text" name="username">
+			<label>Password:</label>
+			<input type="password" name="password">
+			<label>Zip-code:</label>
+			<input type="text" name="zip_code" placeholder="For weather accuracy!">
+  		<input class="submit" type="submit" value= "Create account">
+		</form>		
+
+		<% if @error %>
+		<p class="error_message"><%= @error %></p>
+		<% end %>	
+
+		<% if @errors %>
+  		<ul>
+  			<% @errors.each do |error| %>
+   				<li><%= error %></li>
+  			<% end %>
+  		</ul>
+		<% end %>
 		
 	</section>
 	
-	<section id="middle">
-		<ul class="menu">
-    <li>
-        <a class="something" href="#"><div class="button">Something...</div></a>
-        <ul>
-            <li><a href="#">Funny</a></li>
-            <li><a href="#">Inspirational</a></li>
-            <li><a href="#">Motivational</a></li>
-            <li><a href="#"></a></li>
-        </ul>
-    </li>
-</ul>
+	<section id="content" >
+
 
 	</section>
 
-	<aside id="sidebar" class="weather">
-		<h2>Weather</h2>
-			<p></p>
+	<aside id="sidebar" class="">
+				<a class="registerClick" href=""><h2 class="button">Login</h2></a>
+		<form class="animatedForm" method="post" action="/session">
+			<label>Username:</label>
+			<input type="text" name="username">
+			<label>Password:</label>
+			<input type="password" name="password">
+  		<input class="submit" type="submit" value= "Login">
+		</form>		
+
 	</aside>
 	
 	<footer>
-		<p><a href='/logout'>Goodbye!</a></p>
+		
 	</footer>
 
 </div>

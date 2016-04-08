@@ -78,7 +78,7 @@ var keyword = "mountains";
               	}
 
 
-                $("#content h2").text(today.getMonth() +
+                $("#content h2.time").text(today.getMonth() +
                     "-" +
                     (today.getDate()+1)+"-" +
                     today.getFullYear()); 
@@ -97,5 +97,21 @@ var keyword = "mountains";
             }
 
             startTime();
+
+        $("a.registerClick").on("click", function(event){
+            event.preventDefault();
+            var $form = $(this).next('form');
+
+            if ($form.css("display") === "none") {
+                $form.fadeIn("slow");
+            } else {
+                $form.fadeOut("slow");
+            }
+        }); // register click
+
+
+
+
+
         
     }); // Doc ready end
